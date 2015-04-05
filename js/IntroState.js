@@ -11,6 +11,9 @@ IntroState.prototype =
         
         //set the start variables for the game
         
+        this.game.level = 0;
+		this.game.score = 0;
+        
     },
     
     update: function()
