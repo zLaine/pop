@@ -27,5 +27,7 @@ PreloadState.prototype =
         console.log("Preloaded");
         
         //start BGM here?  
+        
+        this.game.state.start("intro");
     }
 };
