@@ -10,7 +10,7 @@ BootState.prototype =
     preload: function()
     {
         this.game.load.image("loading", "assets/loading.png");
-    }
+    },
     
     //move to preload
     create: function()
@@ -18,4 +18,4 @@ BootState.prototype =
         console.log("Booted");
         this.game.state.start("Preload");
     }
-}
+};
