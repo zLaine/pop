@@ -4,7 +4,7 @@ Game.prototype =
 {
     start: function()
     {
-        var game = new Phaser.Game(800, 600, Phaser.AUTO, "game", { preload: preload, create: create, update: update, render: render });
+        var game = new Phaser.Game(800, 600, Phaser.AUTO, "game");
         
         /* Add game states */
         game.state.add("boot", BootState);
