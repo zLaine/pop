@@ -23,7 +23,7 @@ PlayState.prototype =
     {
         for(var i = 0; i < n; i++)
         {
-            var x = this.game.rnd.integerInRange(100, 770);
+            var x = this.game.rnd.integerInRange(0, 770);
             var y = this.game.rnd.integerInRange(0, 570);
             var bubbleColor = this.game.rnd.integerInRange(0,7);
             
