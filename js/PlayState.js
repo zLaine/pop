@@ -8,10 +8,13 @@ PlayState.prototype =
     {
         console.log("Play");
         
+        this.bubbleCounter = 0;
+        
         this.bubbles = this.game.add.group();
         this.bubbles.enableBody = true;
         this.bubbles.inputEnabled;
         this.createBubbles(20);
+        
     },
     
     update: function()
@@ -33,6 +36,8 @@ PlayState.prototype =
             
             bubble.body.collideWorldBounds = true;
             bubble.body.immovable = true;
+            
+            this.bubbleCounter++;
             
         }
     }
