@@ -17,7 +17,7 @@ PlayState.prototype =
     update: function()
     {
         
-    }
+    },
     
     createBubbles: function(n)
     {
