@@ -22,6 +22,13 @@ PlayState.prototype =
         
     },
     
+    bubbleClick: function(bubble)
+    {
+        //this.bubbleCounter--;
+        //play sound here
+       // this.destroy();
+    },
+    
     createBubbles: function(n)
     {
         for(var i = 0; i < n; i++)
@@ -42,12 +49,7 @@ PlayState.prototype =
             this.bubbleCounter++;
             
         }
-    },
-    
-    bubbleClick: function(bubble)
-    {
-        //this.bubbleCounter--;
-        //play sound here
-       // this.destroy();
     }
+    
+    
 };
