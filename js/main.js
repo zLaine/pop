@@ -11,7 +11,7 @@ Game.prototype =
         game.state.add("preload", PreloadState);
         game.state.add("intro", IntroState);
         game.state.add("play", PlayState);
-        game.state.add("game over", GameOverState);
+//        game.state.add("game over", GameOverState);
         
         game.state.start("boot");
     }
