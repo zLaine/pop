@@ -40,8 +40,8 @@ PlayState.prototype =
             bubble.events.onInputDown.add(this.bubbleClick, bubble);
             //this.bubbleClick(bubble);
             this.bubbleCounter++;
-            
-        },
+        }    
+    },
     
     bubbleClick: function(bubble)
     {
@@ -49,7 +49,6 @@ PlayState.prototype =
         //this.bubbleCounter--;
         //play sound here
         this.destroy();
-    }
     }
     
     
