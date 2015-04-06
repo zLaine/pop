@@ -9,7 +9,7 @@ BootState.prototype =
     //load the loading image
     preload: function()
     {
-        this.game.load.image("loading", "assets/loading.png");
+        //this.game.load.image("loading", "assets/loading.png");
     },
     
     //move to preload
