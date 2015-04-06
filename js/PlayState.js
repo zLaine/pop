@@ -12,7 +12,7 @@ PlayState.prototype =
         
         this.bubbles = this.game.add.group();
         this.bubbles.enableBody = true;
-        this.bubbles.inputEnabled;
+        this.bubbles.inputEnabled = true;
         this.createBubbles(20);
         
     },
@@ -37,8 +37,8 @@ PlayState.prototype =
             bubble.body.collideWorldBounds = true;
             bubble.body.immovable = true;
             
-            //bubble.events.onInputDown.add(this.bubbleClick, bubble);
-            this.bubbleClick(bubble);
+            bubble.events.onInputDown.add(this.bubbleClick, this);
+           // this.bubbleClick(bubble);
             this.bubbleCounter++;
         }    
     },
@@ -48,7 +48,7 @@ PlayState.prototype =
         console.log("In bubbleClick");
         //this.bubbleCounter--;
         //play sound here
-        this.destroy();
+        bubble.destroy();
     }
     
     
