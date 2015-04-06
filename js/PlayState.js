@@ -24,6 +24,7 @@ PlayState.prototype =
     
     bubbleClick: function(bubble)
     {
+        console.log("In bubbleClick");
         this.bubbleCounter--;
         //play sound here
         this.destroy();
