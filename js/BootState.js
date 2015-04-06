@@ -16,6 +16,6 @@ BootState.prototype =
     create: function()
     {
         console.log("Booted");
-        this.game.state.start("Preload");
+        this.game.state.start("preload");
     }
 };
