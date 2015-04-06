@@ -48,6 +48,6 @@ PlayState.prototype =
     {
         this.bubbleCounter--;
         //play sound here
-        this.bubble.destroy();
+        bubble.destroy();
     }
 };
