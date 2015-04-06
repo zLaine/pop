@@ -37,17 +37,17 @@ PlayState.prototype =
             bubble.body.collideWorldBounds = true;
             bubble.body.immovable = true;
             
-            bubble.events.onInputDown.add(bubbleClick, this);
+            bubble.events.onInputDown.add(bubbleClick, bubble);
             
             this.bubbleCounter++;
             
         }
     },
     
-    bubbleClick: function(bubble)
+    bubbleClick: function()
     {
-        this.bubbleCounter--;
+        //this.bubbleCounter--;
         //play sound here
-        bubble.destroy();
+        this.destroy();
     }
 };
