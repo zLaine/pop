@@ -44,8 +44,8 @@ PlayState.prototype =
             bubble.body.collideWorldBounds = true;
             bubble.body.immovable = true;
             
-            //bubble.events.onInputDown.add(bubbleClick, this);
-            this.bubbleClick(bubble);
+            bubble.events.onInputDown.add(this.bubbleClick, this);
+            //this.bubbleClick(bubble);
             this.bubbleCounter++;
             
         }
