@@ -11,7 +11,7 @@ PlayState.prototype =
         this.bubbles = this.game.add.group();
         this.bubbles.enableBody = true;
         this.bubbles.inputEnabled;
-        this.createBubbles(15);
+        this.createBubbles(9);
     },
     
     update: function()
@@ -28,7 +28,7 @@ PlayState.prototype =
             var bubbleColor = this.game.rnd.integerInRange(0,7);
             
             var bubble = this.bubbles.create(x,y, "bubbles", bubbleColor);
-            var scale = this.game.rnd.integerInRange(1, 4);
+            var scale = this.game.rnd.integerInRange(1, 3);
             bubble.scale.set(scale);
             
             bubble.body.collideWorldBounds = true;
