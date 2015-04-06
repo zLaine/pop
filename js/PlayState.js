@@ -29,7 +29,7 @@ PlayState.prototype =
             
             var bubble = this.bubbles.create(x,y, "bubbles", bubbleColor);
             var scale = this.game.rnd.integerInRange(1, 4);
-            bubble.scale(scale);
+            bubble.scale.set(scale);
             
             bubble.body.collideWorldBounds = true;
             bubble.body.immovable = true;
