@@ -45,7 +45,7 @@ PlayState.prototype =
             bubble.body.immovable = true;
             
             //bubble.events.onInputDown.add(bubbleClick, this);
-            bubbleClick(bubble);
+            this.bubbleClick(bubble);
             this.bubbleCounter++;
             
         }
