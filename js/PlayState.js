@@ -37,7 +37,7 @@ PlayState.prototype =
             bubble.body.collideWorldBounds = true;
             bubble.body.immovable = true;
             
-            bubble.events.onInputDown.add(bubbleClick, this);
+            this.bubble.events.onInputDown.add(bubbleClick, this);
             
             this.bubbleCounter++;
             
@@ -48,6 +48,6 @@ PlayState.prototype =
     {
         this.bubbleCounter--;
         //play sound here
-        bubble.destroy();
+        this.bubble.destroy();
     }
 };
