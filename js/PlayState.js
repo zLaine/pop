@@ -46,6 +46,8 @@ PlayState.prototype =
     
     bubbleClick: function(bubble)
     {
-        
+        this.bubbleCounter--;
+        //play sound here
+        bubble.destroy();
     }
 };
