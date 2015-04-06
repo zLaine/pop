@@ -22,14 +22,6 @@ PlayState.prototype =
         
     },
     
-    bubbleClick: function(bubble)
-    {
-        console.log("In bubbleClick");
-        this.bubbleCounter--;
-        //play sound here
-        this.destroy();
-    },
-    
     createBubbles: function(n)
     {
         for(var i = 0; i < n; i++)
@@ -45,11 +37,19 @@ PlayState.prototype =
             bubble.body.collideWorldBounds = true;
             bubble.body.immovable = true;
             
-            bubble.events.onInputDown.add(this.bubbleClick, this);
+            bubble.events.onInputDown.add(this.bubbleClick, bubble);
             //this.bubbleClick(bubble);
             this.bubbleCounter++;
             
-        }
+        },
+    
+    bubbleClick: function(bubble)
+    {
+        console.log("In bubbleClick");
+        //this.bubbleCounter--;
+        //play sound here
+        this.destroy();
+    }
     }
     
     
