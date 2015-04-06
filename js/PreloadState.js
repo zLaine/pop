@@ -5,7 +5,7 @@ function PreloadState(){};
 PreloadState.prototype =
 {
     //load assets for the game
-    preload: fucntion()
+    preload: function()
     {
         /* Set-up the loading bar */
     /*        var loadingBar = this.add.sprite(400,300,"loading");
