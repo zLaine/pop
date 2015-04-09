@@ -29,7 +29,7 @@ PlayState.prototype =
         {
             this.timeCheck = this.game.time.now;
             var victoryScreen = this.game.add.sprite(0,0, 'victoryScreen');
-            if(this.game.time.now - this.timeCheck > 1000 && this.game.input.activePointer.isDown)
+            if(this.game.time.now - this.timeCheck > 2000)
             {
                 this.game.state.start("intro");
             }
