@@ -9,19 +9,23 @@ PlayState.prototype =
         console.log("Play");
         
         this.bubbleCounter = 0;
-        this.timer
+        this.timeCheck = this.game.time.now;
         
         this.bubbles = this.game.add.group();
         this.bubbles.enableBody = true;
         this.bubbles.inputEnabled = true;
         this.createBubbles(20);
         
-        this.timer = this.game.time.events.add(Phaser.Timer.SECOND * 5, this.createBubbles(5), this);
+        //this.timer = this.game.time.events.add(Phaser.Timer.SECOND * 5, this.createBubbles(5), this);
     },
     
     update: function()
     {
-        
+        if(this.game.time.now - this.timeCheck > 3000)
+        {
+            this.createBubbles(5);
+            this.timeCheck = this.game.time.now;
+        }
     },
     
     createBubbles: function(n)
