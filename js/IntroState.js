@@ -9,6 +9,8 @@ IntroState.prototype =
     {
         console.log("Intro");
         
+        var startScreen = this.game.add.sprite(0,0, 'startScreen');
+        
         //set the start variables for the game
         
         this.game.level = 0;
