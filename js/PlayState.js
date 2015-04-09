@@ -21,9 +21,9 @@ PlayState.prototype =
     
     update: function()
     {
-        if(this.game.time.now - this.timeCheck > 4000 && this.bubbleCounter > 0)
+        if(this.game.time.now - this.timeCheck > 1000 && this.bubbleCounter > 0)
         {
-            this.createBubbles(2);
+            this.createBubbles(1);
             this.timeCheck = this.game.time.now;
         }
     },
@@ -47,13 +47,14 @@ PlayState.prototype =
             bubble.events.onInputDown.add(this.bubbleClick, this);
            // this.bubbleClick(bubble);
             this.bubbleCounter++;
+            //console.log(this.bubbleCounter);
         }    
     },
     
     bubbleClick: function(bubble)
     {
-        console.log("In bubbleClick");
-        //this.bubbleCounter--;
+        //console.log("In bubbleClick");
+        this.bubbleCounter--;
         //play sound here
         bubble.destroy();
     }
