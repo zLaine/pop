@@ -25,6 +25,15 @@ PlayState.prototype =
             this.createBubbles(1);
             this.timeCheck = this.game.time.now;
         }
+        if(this.bubbleCounter <= 0)
+        {
+            var victoryScreen = this.game.add.sprite(0,0, 'victoryScreen');
+            if(this.game.input.activePointer.isDown)
+            {
+                this.game.state.start("intro");
+            }
+            
+        }
     },
     
     createBubbles: function(n)
