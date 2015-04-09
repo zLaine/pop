@@ -21,9 +21,9 @@ PlayState.prototype =
     
     update: function()
     {
-        if(this.game.time.now - this.timeCheck > 3000)
+        if(this.game.time.now - this.timeCheck > 3000 && this.bubbleCounter > 0)
         {
-            this.createBubbles(5);
+            this.createBubbles(2);
             this.timeCheck = this.game.time.now;
         }
     },
