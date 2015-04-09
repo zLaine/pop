@@ -21,6 +21,9 @@ PreloadState.prototype =
         this.game.load.spritesheet("bubbles", "assets/bubbles.png", 40, 40);
             
         /* Load sounds */
+        this.game.load.audio("pop1", "assets/pop1.mp3");
+        this.game.load.audio("pop2", "assets/pop2.mp3");
+        this.game.load.audio("pop3", "assets/pop3.mp3");
         this.game.load.audio("bgm", "assets/Reunited.mp3");
     },
     
