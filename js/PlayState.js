@@ -46,7 +46,6 @@ PlayState.prototype =
             bubble.events.onInputDown.add(this.bubbleClick, this);
            // this.bubbleClick(bubble);
             this.bubbleCounter++;
-            console.log(this.bubbleCounter);
         }    
     },
     
