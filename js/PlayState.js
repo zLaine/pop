@@ -27,8 +27,9 @@ PlayState.prototype =
         }
         if(this.bubbleCounter <= 0)
         {
+            this.timeCheck = this.game.time.now;
             var victoryScreen = this.game.add.sprite(0,0, 'victoryScreen');
-            if(this.game.input.activePointer.isDown)
+            if(this.game.input.activePointer.isDown && this.game.time.now - this.timeCheck > 1000)
             {
                 this.game.state.start("intro");
             }
@@ -53,14 +54,12 @@ PlayState.prototype =
             bubble.inputEnabled = true;
             
             bubble.events.onInputDown.add(this.bubbleClick, this);
-           // this.bubbleClick(bubble);
             this.bubbleCounter++;
         }    
     },
     
     bubbleClick: function(bubble)
     {
-        //console.log("In bubbleClick");
         this.bubbleCounter--;
         var pop2 = this.game.add.audio('pop2');
         var pop3 = this.game.add.audio('pop3');
