@@ -54,7 +54,17 @@ PlayState.prototype =
     {
         //console.log("In bubbleClick");
         this.bubbleCounter--;
-        //play sound here
+        var pop2 = this.game.add.audio('pop2');
+        var pop3 = this.game.add.audio('pop3');
+        
+        if(this.game.time.now % 2 == 0)
+        {
+            pop2.play();
+        }
+        else
+        {
+            pop3.play();
+        }
         bubble.destroy();
     }
     
