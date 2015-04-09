@@ -9,12 +9,14 @@ PlayState.prototype =
         console.log("Play");
         
         this.bubbleCounter = 0;
+        this.timer
         
         this.bubbles = this.game.add.group();
         this.bubbles.enableBody = true;
         this.bubbles.inputEnabled = true;
         this.createBubbles(20);
         
+        this.timer = this.game.time.events.add(Phaser.Timer.SECOND * 5, this.createBubbles(5), this);
     },
     
     update: function()
