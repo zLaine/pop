@@ -15,6 +15,7 @@ PreloadState.prototype =
         /* Load tile map */
         
         /* Load images */
+        this.game.load.sprite("startScreen", "assets/startScreen.png");
 
         /* Load spritesheets */
         this.game.load.spritesheet("bubbles", "assets/bubbles.png", 40, 40);
